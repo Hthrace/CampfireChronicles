@@ -1,0 +1,26 @@
+<!-- This is Leaflet the leading open-source JavaScript library for mobile-friendly interactive maps https://leafletjs.com/ . I am using the OpenStreetMap tile layer https://operations.osmfoundation.org/policies/tiles/ . To create the cluster map I used Leaflet.markercluster https://github.com/Leaflet/Leaflet.markercluster-->
+
+<link rel="stylesheet" href="/leaflet/leaflet.css">
+<script src="/leaflet/leaflet.js"></script>
+
+<link rel="stylesheet" href="/stylesheets/clusterMap.css" />
+
+<link
+  rel="stylesheet"
+  href="/Leaflet.markercluster-1.4.1/Leaflet.markercluster-1.4.1/dist/MarkerCluster.css"
+/>
+<link
+  rel="stylesheet"
+  href="/Leaflet.markercluster-1.4.1/Leaflet.markercluster-1.4.1/dist/MarkerCluster.Default.css"
+/>
+<script src="/Leaflet.markercluster-1.4.1/Leaflet.markercluster-1.4.1/dist/leaflet.markercluster-src.js"></script>
+
+<div id="map" class="rounded"></div>
+
+<script>
+  const campData = <%- JSON.stringify(campData) %>
+</script>
+
+<script src="/javascript/clusterMap.js"></script>
+
+<!-- Latitude is the Y axis, longitude is the X axis -->

@@ -1,0 +1,13 @@
+<% layout('layouts/boilerplate') -%>
+<div class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Status Code: <%= statusCode %></h4>
+
+  <% if (process.env.NODE_ENV !== "production") { %>
+  <p><%= message %></p>
+  <% } %>
+  <hr />
+  <p class="mb-0">
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eveniet quis
+    sequi earum dolorum?" - Someone
+  </p>
+</div>

@@ -1,0 +1,17 @@
+<!-- This is Leaflet the leading open-source JavaScript library for mobile-friendly interactive maps https://leafletjs.com/ . I am using the OpenStreetMap tile layer https://operations.osmfoundation.org/policies/tiles/-->
+
+<link rel="stylesheet" href="/leaflet/leaflet.css" />
+
+<script src="/leaflet/leaflet.js"></script>
+
+<link rel="stylesheet" href="/stylesheets/singleMap.css" />
+
+<div id="map" class="rounded"></div>
+
+<script>
+  const coordinatesX = "<%=campData.geometry.coordinates[0]%>";
+  const coordinatesY = "<%=campData.geometry.coordinates[1]%>";
+  const campTitle = "<%=campData.title%>";
+</script>
+
+<script src="/javascript/singleMap.js"></script>

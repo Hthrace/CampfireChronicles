@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate') -%>
+<section row>
+  <div class="mb-3 col-md"><%- include("../partials/clusterMap")%></div>
+</section>
+<section class="row">
+  <h1 class="text-center">All Campgrounds</h1>
+  <hr />
+  <ul>
+    <%for(let c of campData) {%>
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <%if(c.image.length >= 1){%>
+          <img
+            crossorigin="anonymous"
+            src="<%=c.image[0].url%>"
+            class="img-fluid rounded-start"
+            alt="<%= c.title %> campground image"
+          />
+          <%}else{%>
+          <img
+            src="/imgs/defaultImgOne.jpg"
+            class="img-fluid rounded-start"
+            alt="<%= c.title %> campground image"
+          />
+          <%}%>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <a href="/campgrounds/<%= c._id %>">
+              <h5 class="card-title"><%= c.title %></h5></a
+            >
+            <p class="card-text"><%= c.description %></p>
+            <p class="card-text">
+              <small class="text-muted"
+                ><%= c.address.street %> <%= c.address.city %> <%=
+                c.address.state %></small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%}%>
+  </ul>
+</section>
