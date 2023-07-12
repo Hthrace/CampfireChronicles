@@ -1,7 +1,7 @@
 //Using the US Census API for geocoding https://geocoding.geo.census.gov/geocoder/Geocoding_Services_API.html
 
 module.exports.geocode = async (st, city, state) => {
-  const street = st.split(" ").join("+");
+  /* const street = st.split(" ").join("+");
 
   const response = await fetch(
     `https://geocoding.geo.census.gov/geocoder/locations/address?street=${street}&city=${city}&state=${state}&benchmark=2020&format=json`
@@ -12,5 +12,6 @@ module.exports.geocode = async (st, city, state) => {
     return { type: "Point", coordinates: [x, y] };
   } else {
     return { type: "Point", coordinates: [-0, 0] };
-  }
+  } */
+  return { type: "Point", coordinates: [-0, 0] };
 };
