@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const dbName = "yelpCamp";
+const dbName = "campfireChronicles";
 const campground = require("../models/campground");
 const cities = require("./cities");
 const { places, descriptors } = require("./seedHelpers");
