@@ -157,7 +157,7 @@ async function dbConnect(db) {
 //Misc.----------------------------------------------------------------------------
 
 app.get("/", (req, res) => {
-  res.render("Home", { page: "Home" });
+  res.render("home", { page: "home" });
 });
 
 app.all("*", (req, res, next) => {
@@ -165,7 +165,10 @@ app.all("*", (req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
+  console.log(err);
   const { statusCode = 500, message = "Someting Went Wrong, Try Again!" } = err;
   res.status(statusCode).render("error", { message, statusCode });
   next();
 });
+
+
