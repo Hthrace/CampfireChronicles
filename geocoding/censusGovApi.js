@@ -7,12 +7,11 @@ module.exports.geocode = async (st, city, state) => {
   const response = await axios.get(
     `https://geocoding.geo.census.gov/geocoder/locations/address?street=${street}&city=${city}&state=${state}&benchmark=2020&format=json`
   );
-  
-  console.log(response.data.result.addressMatches[0].coordinates)
+
   if (response.data.result.addressMatches.length >= 1) {
     const { x, y } = response.data.result.addressMatches[0].coordinates;
     return { type: "Point", coordinates: [x, y] };
   } else {
     return { type: "Point", coordinates: [-0, 0] };
-  } 
+  }
 };

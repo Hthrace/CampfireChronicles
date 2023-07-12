@@ -160,12 +160,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.all("*", (req, res, next) => {
-  next(new AppError("Page Not Found", 404));
-});
-
 app.use((err, req, res, next) => {
-  console.log(err);
   const { statusCode = 500, message = "Someting Went Wrong, Try Again!" } = err;
   res.status(statusCode).render("error", { message, statusCode });
   next();
