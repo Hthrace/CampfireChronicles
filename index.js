@@ -157,7 +157,7 @@ async function dbConnect(db) {
 //Misc.----------------------------------------------------------------------------
 
 app.get("/", (req, res) => {
-  res.render("home", { page: "home" });
+  res.render("home");
 });
 
 app.all("*", (req, res, next) => {
