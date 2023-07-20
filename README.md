@@ -5,6 +5,15 @@ Campfire Chronicles is a captivating portfolio app that showcases my adeptness w
 ## [Live Demo](https://campfirechronicles.onrender.com/)
 This app is deployed on [Render](https://campfirechronicles.onrender.com/) free tier. So please give the service time to spin up for the demo.
 
+## Table of Contents
+
+- [Technologies](#technologies)
+- [Features](#features)
+- [Description](#description)
+- [Deployment](#deployment)
+- [Contribution](#contribution)
+- [License](#license)
+
 ## Technologies
 
 - MongoDB
@@ -84,6 +93,7 @@ This project is a personal portfolio app, and I currently do not accept contribu
 ## License
 
 The content of this project is licensed under the [MIT License](LICENSE).
+
 ---
 
 
